@@ -1,0 +1,10 @@
+.body {
+  background-image: url("../assets/images/field2.jpg");
+  background-repeat: repeat-x;
+  font-family: Arial;
+  min-height: 100%;
+  background-size: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: #121212;
+}
