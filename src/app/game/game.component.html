@@ -1,3 +1,6 @@
-<p>
-  game works!
-</p>
+  <div class="container">
+    <section class="row">
+      <app-field *ngFor="let field of game.fields" [field]="field"></app-field>
+    </section>
+    <section class="row"></section>
+  </div>

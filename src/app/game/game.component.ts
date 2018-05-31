@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Game} from '../model/game.model';
+import {GameService} from '../service/game.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-game',
@@ -7,7 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  game: Game;
+  gameSubscription: Subscription;
+
+  constructor(private gameService: GameService) {
+    this.gameSubscription = this.gameService.gameSubject.subscribe(
+      (game: Game) => {
+        this.game = game;
+      }
+    );
+    this.gameService.emitGame();
+  }
 
   ngOnInit() {
   }

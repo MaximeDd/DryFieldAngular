@@ -8,6 +8,7 @@ import {ScoreComponent} from './score/score.component';
 import {HelpComponent} from './help/help.component';
 import {GameService} from './service/game.service';
 import { HeaderComponent } from './header/header.component';
+import { FieldComponent } from './field/field.component';
 
 const appRoutes: Routes = [
   {path: 'game', component: GameComponent},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     GameComponent,
     ScoreComponent,
     HelpComponent,
-    HeaderComponent
+    HeaderComponent,
+    FieldComponent
   ],
   imports: [
     BrowserModule,
