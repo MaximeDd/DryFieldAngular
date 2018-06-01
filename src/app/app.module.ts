@@ -7,8 +7,11 @@ import {GameComponent} from './game/game.component';
 import {ScoreComponent} from './score/score.component';
 import {HelpComponent} from './help/help.component';
 import {GameService} from './service/game.service';
-import { HeaderComponent } from './header/header.component';
-import { FieldComponent } from './field/field.component';
+import {HeaderComponent} from './header/header.component';
+import {FieldComponent} from './field/field.component';
+import {WaterTankComponent} from './water-tank/water-tank.component';
+import {NewFieldComponent} from './new-field/new-field.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: 'game', component: GameComponent},
@@ -25,10 +28,14 @@ const appRoutes: Routes = [
     ScoreComponent,
     HelpComponent,
     HeaderComponent,
-    FieldComponent
+    FieldComponent,
+    WaterTankComponent,
+    NewFieldComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

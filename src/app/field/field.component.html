@@ -1,13 +1,16 @@
-
-      <div class='field col-sm-2'>
-        <p class="fieldStock">
-          <span>{{floor(field.stock)}}L</span>
-        </p>
-      </div>
-      <div class="fieldButtons col-sm-2">
-        <img src="../../assets/images/robinet.png" alt="Irrigate button">
-        <!--<img src="../../assets/images/robinetOk.png" alt="Irrigate button">-->
-        <img src="../../assets/images/rateau.png" alt="Irrigate button" *ngIf="field.ripeness<100">
-        <img src="../../assets/images/rateauOk.png" alt="Irrigate button" *ngIf="field.ripeness>=100">
-      </div>
+<div class="col-sm-4">
+  <div class='field col-sm-6'>
+    <p class="fieldStock">
+      <span>{{floor(field.stock)}}L</span>
+    </p>
+  </div>
+  <div class="fieldButtons col-sm-6">
+    <img src="../../assets/images/robinet.png" alt="Irrigate button" *ngIf="!quickIrrigation"
+         (click)="onIrrigate()">
+    <!--<img src="../../assets/images/robinetOk.png" alt="Irrigate button" *ngIf="quickIrrigation"-->
+    <!--(mouseUp)="onStopIrrigate()">-->
+    <img src="../../assets/images/rateau.png" alt="Irrigate button" *ngIf="field.ripeness<100">
+    <img src="../../assets/images/rateauOk.png" alt="Irrigate button" *ngIf="field.ripeness>=100" (click)="onHarvest()">
+  </div>
+</div>
 

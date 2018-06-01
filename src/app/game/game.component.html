@@ -1,6 +1,29 @@
-  <div class="container">
-    <section class="row">
-      <app-field *ngFor="let field of game.fields" [field]="field"></app-field>
-    </section>
-    <section class="row"></section>
-  </div>
+<div class="container">
+  <!--<div class="row">-->
+  <!--<div class="col-sm-10 col-sm-offset-1">-->
+    <!--<section class="row">-->
+      <!--<app-field *ngFor="let field of game.fields" [field]="field"></app-field>-->
+    <!--</section>-->
+    <!--<section class="row buyButtons">-->
+      <!--<app-water-tank class="col-sm-5 col-sm-offset-1"></app-water-tank>-->
+      <!--<app-new-field class="col-sm-4 col-sm-offset-2"></app-new-field>-->
+    <!--</section>-->
+  <!--</div>-->
+
+    <div class="row">
+        <section class="col-sm-4">
+          <app-water-tank class="col-sm-12"></app-water-tank>
+          <app-new-field class="col-sm-12"></app-new-field>
+        </section>
+
+        <section class="col-sm-8">
+          <app-field *ngFor="let field of game.fields" [field]="field"></app-field>
+        </section>
+      </div>
+    </div>
+<footer class="row">
+  <span class="col-sm-3">Temps passé : {{ game.time }} j</span>
+  <span class="col-sm-3">Nombre de récolte : {{ game.harvestNumber }}</span>
+  <span class="col-sm-3">Argent : {{ game.money}}</span>
+  <span class="col-sm-3">Eau disponible : {{ game.waterStock}}</span>
+</footer>

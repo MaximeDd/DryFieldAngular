@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Field} from '../model/field.model';
+import {GameService} from '../service/game.service';
 
 @Component({
   selector: 'app-field',
@@ -11,14 +12,25 @@ export class FieldComponent implements OnInit {
   @Input()
   field: Field;
 
-  constructor() {
+  @Input()
+  quickIrrigation = false;
+
+  constructor(private gameService: GameService) {
   }
 
   floor(num: number) {
-    return Math.floor(num);
+    const floor = Math.floor(num);
+    return floor > 0 ? floor : 0;
   }
 
   ngOnInit() {
   }
 
+  onIrrigate() {
+    this.gameService.irrigate(this.field);
+  }
+
+  onHarvest() {
+    this.gameService.harvest(this.field);
+  }
 }

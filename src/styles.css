@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: #DEDEDE;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #E5D908;
+  font-size: x-large;
+}
+

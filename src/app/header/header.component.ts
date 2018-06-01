@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {GameService} from '../service/game.service';
 import {Game} from '../model/game.model';
 import {Subscription} from 'rxjs';
@@ -8,7 +8,7 @@ import {Subscription} from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   game: Game;
   gameSubscription: Subscription;
 
@@ -24,6 +24,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnDestroy(): void {
+    this.gameSubscription.unsubscribe();
+  }
+
   onPlayGame() {
+    this.gameService.changeStateGame();
   }
 }

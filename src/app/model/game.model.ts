@@ -11,7 +11,8 @@ export class Game {
   constructor() {
     this.money = 50;
     this.harvestNumber = 0;
-    this.waterStock = 3;
+    // this.waterStock = 3;
+    this.waterStock = 20;
     this.gameBreak = true;
     this.fields = [];
     this.fields.push(new Field());
