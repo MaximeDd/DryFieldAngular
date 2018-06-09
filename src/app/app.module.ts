@@ -12,6 +12,7 @@ import {FieldComponent} from './field/field.component';
 import {WaterTankComponent} from './water-tank/water-tank.component';
 import {NewFieldComponent} from './new-field/new-field.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MaterialModule} from './material.module';
 
 const appRoutes: Routes = [
   {path: 'game', component: GameComponent},
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MaterialModule
   ],
   providers: [
     GameService
