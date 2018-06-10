@@ -13,6 +13,8 @@ import {WaterTankComponent} from './water-tank/water-tank.component';
 import {NewFieldComponent} from './new-field/new-field.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
+import { DialogComponent } from './dialog/dialog.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path: 'game', component: GameComponent},
@@ -31,19 +33,22 @@ const appRoutes: Routes = [
     HeaderComponent,
     FieldComponent,
     WaterTankComponent,
-    NewFieldComponent
+    NewFieldComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [
     GameService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule {
 }

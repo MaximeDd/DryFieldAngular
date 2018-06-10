@@ -3,10 +3,10 @@ import * as md from '@angular/material';
 
 @NgModule({
   imports: [
-    md.MatSliderModule
+    md.MatDialogModule
   ],
   exports: [
-    md.MatSliderModule
+    md.MatDialogModule
   ],
   declarations: []
 })

@@ -1,4 +1,5 @@
 import {Field} from './field.model';
+import {ClimaticDisorder} from './climaticDisorder';
 
 export class Game {
   money: number;
@@ -7,6 +8,7 @@ export class Game {
   gameBreak: boolean;
   fields: Field[];
   time: number;
+  climaticDisorder: ClimaticDisorder;
 
   constructor() {
     this.money = 50;

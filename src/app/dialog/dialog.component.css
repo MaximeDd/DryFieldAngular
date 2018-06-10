@@ -1,0 +1,36 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+h1, h3 {
+  color: #E5D908;
+}
+
+figcaption.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.close-button {
+  width: 30%;
+  height: 30%;
+  float: right;
+}
+
+figcaption.text {
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  padding: 10%;
+  width: 100%;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+

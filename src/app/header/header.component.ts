@@ -29,6 +29,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   onPlayGame() {
-    this.gameService.changeStateGame();
+    this.gameService.breakOrPlay();
   }
 }

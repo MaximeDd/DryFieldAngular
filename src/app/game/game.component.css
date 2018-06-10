@@ -4,3 +4,7 @@
 .container{
   width: 98%;
 }
+
+app-water-tank{
+  min-height: 150px;
+}
