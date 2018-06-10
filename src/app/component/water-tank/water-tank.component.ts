@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Game} from '../model/game.model';
-import {GameService} from '../service/game.service';
+import {Game} from '../../model/game.model';
+import {GameService} from '../../service/game.service';
 import {Subscription} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 

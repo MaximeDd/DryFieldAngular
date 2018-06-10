@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {GameService} from '../service/game.service';
+import {GameService} from '../../service/game.service';
 
 @Component({
   selector: 'app-new-field',

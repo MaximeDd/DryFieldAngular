@@ -1,0 +1,27 @@
+<nav class="navbar navbar_default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <img src="../../../assets/images/dryfield2.png" alt="logo">
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a routerLink="game">
+          <img src="../../../assets/images/start.png" alt="bouton play" (click)="onPlayGame()" *ngIf="game.gameBreak">
+          <img src="../../../assets/images/break.png" alt="bouton pause" (click)="onPlayGame()" *ngIf="!game.gameBreak">
+        </a>
+      </li>
+      <li>
+        <a routerLink="help">
+          <img src="../../../assets/images/cup.png" alt="bouton score">
+        </a>
+      </li>
+      <li>
+        <a routerLink="score">
+          <img src="../../../assets/images/help.png" alt="bouton aide">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

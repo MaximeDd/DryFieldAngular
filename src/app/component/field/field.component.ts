@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Field} from '../model/field.model';
-import {GameService} from '../service/game.service';
+import {Field} from '../../model/field.model';
+import {GameService} from '../../service/game.service';
 
 @Component({
   selector: 'app-field',

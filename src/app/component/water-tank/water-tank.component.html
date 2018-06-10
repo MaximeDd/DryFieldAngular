@@ -1,8 +1,8 @@
 <div class="row">
-  <img class="col-sm-5" src="../../assets/images/water.png" alt="bouton achat eau" (click)="onOpenWaterPopIn()">
+  <img class="col-sm-5" src="../../../assets/images/water.png" alt="bouton achat eau" (click)="onOpenWaterPopIn()">
   <div class="col-sm-7" id="waterPopIn" *ngIf="waterPopInShow">
     <div id="popInTitle">
-      <img id="popInClose" src="../../assets/images/close.png" alt="bouton fermeture fenêtre"
+      <img id="popInClose" src="../../../assets/images/close.png" alt="bouton fermeture fenêtre"
            (click)="onCloseWaterPopIn()">
       <p id="textPopInTitle">Acheter de l'eau</p>
     </div>
@@ -13,7 +13,7 @@
           <select class="form-control" id="quantity" name="quantity" formControlName="quantity">
             <option *ngFor="let money of moneyBag">{{money}}</option>
           </select>
-          <input type="image" src="../../assets/images/check.png" border="0" alt="Submit" />
+          <input type="image" src="../../../assets/images/check.png" border="0" alt="Submit" />
         </div>
       </form>
     </div>

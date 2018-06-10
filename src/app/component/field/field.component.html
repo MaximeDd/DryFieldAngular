@@ -5,12 +5,12 @@
     </p>
   </div>
   <div class="fieldButtons col-sm-5">
-    <img src="../../assets/images/robinet.png" alt="Irrigate button" *ngIf="!quickIrrigation"
+    <img src="../../../assets/images/robinet.png" alt="Irrigate button" *ngIf="!quickIrrigation"
          (click)="onIrrigate()">
     <!--<img src="../../assets/images/robinetOk.png" alt="Irrigate button" *ngIf="quickIrrigation"-->
     <!--(mouseUp)="onStopIrrigate()">-->
-    <img src="../../assets/images/rateau.png" alt="Irrigate button" *ngIf="field.ripeness<100">
-    <img src="../../assets/images/rateauOk.png" alt="Irrigate button" *ngIf="field.ripeness>=100" (click)="onHarvest()">
+    <img src="../../../assets/images/rateau.png" alt="Irrigate button" *ngIf="field.ripeness<100">
+    <img src="../../../assets/images/rateauOk.png" alt="Irrigate button" *ngIf="field.ripeness>=100" (click)="onHarvest()">
   </div>
 </div>
 

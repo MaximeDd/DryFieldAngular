@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Game} from '../model/game.model';
-import {GameService} from '../service/game.service';
+import {Game} from '../../model/game.model';
+import {GameService} from '../../service/game.service';
 import {Subscription} from 'rxjs';
 import {MatDialog} from '@angular/material';
 import {DialogComponent} from '../dialog/dialog.component';

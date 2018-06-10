@@ -41,11 +41,11 @@ export class GameService {
   }
 
   isGameOver() {
-    this.game.fields.forEach(field => {
+    for (const field of this.game.fields) {
       if (field.stock + field.ripeness / 5 + this.game.money + this.game.waterStock >= 20) {
         return false;
       }
-    });
+    }
     return true;
   }
 
@@ -100,9 +100,8 @@ export class GameService {
   }
 
   generateClimaticDisorder() {
-    // const nRandom = Math.floor(Math.random() * 1500);
-    const nRandom = Math.floor(Math.random() * 15);
-    console.log(nRandom);
+    const nRandom = Math.floor(Math.random() * 1500);
+    // const nRandom = Math.floor(Math.random() * 15);
     switch (nRandom) {
       case 1 :
         this.game.climaticDisorder = new ClimaticDisorder(
