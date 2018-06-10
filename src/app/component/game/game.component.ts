@@ -4,6 +4,7 @@ import {GameService} from '../../service/game.service';
 import {Subscription} from 'rxjs';
 import {MatDialog} from '@angular/material';
 import {DialogComponent} from '../dialog/dialog.component';
+import {GameOverComponent} from '../game-over/game-over.component';
 
 @Component({
   selector: 'app-game',
@@ -20,7 +21,8 @@ export class GameComponent implements OnInit, OnDestroy {
               public dialog: MatDialog) {
     this.gameSubscription = this.gameService.gameSubject.subscribe(
       (game: Game) => {
-        this.openDialogIfClimaticDisorder(game);
+        this.checkGameOver(game);
+        this.checkClimaticDisorder(game);
         this.game = game;
       }
     );
@@ -38,7 +40,7 @@ export class GameComponent implements OnInit, OnDestroy {
     this.gameSubscription.unsubscribe();
   }
 
-  private openDialogIfClimaticDisorder(game: Game) {
+  private checkClimaticDisorder(game: Game) {
     if (game.climaticDisorder && !this.isDialogOpen) {
       this.isDialogOpen = true;
       this.dialog.open(DialogComponent, {
@@ -50,6 +52,17 @@ export class GameComponent implements OnInit, OnDestroy {
           title: game.climaticDisorder.title,
           text: game.climaticDisorder.text
         }
+      });
+    }
+  }
+
+  private checkGameOver(game: Game) {
+    if (game.gameOver && !this.isDialogOpen) {
+      this.isDialogOpen = true;
+      this.dialog.open(GameOverComponent, {
+        width: '50%',
+        height: '80%',
+        panelClass: 'custom-dialog-container'
       });
     }
   }

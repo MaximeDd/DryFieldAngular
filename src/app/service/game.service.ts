@@ -13,6 +13,10 @@ export class GameService {
   gameSubject = new Subject<Game>();
 
   constructor() {
+    this.launchGame();
+  }
+
+  private launchGame() {
     this.game = new Game();
     this.run();
   }
@@ -32,6 +36,9 @@ export class GameService {
               this.setWaterConsumption(field);
               this.growCrop(field);
             });
+          } else {
+            this.breakOrPlay();
+            this.game.gameOver = true;
           }
           this.generateClimaticDisorder();
         }
@@ -158,5 +165,8 @@ export class GameService {
 
   breakOrPlay() {
     this.game.gameBreak = !this.game.gameBreak;
+    if (this.game.gameOver) {
+      this.launchGame();
+    }
   }
 }

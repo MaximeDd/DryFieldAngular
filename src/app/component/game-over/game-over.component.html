@@ -1,0 +1,10 @@
+<section>
+  <img src="../../../assets/images/gameOver.png">
+  <form form (submit)="saveScore()" #pseudoForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Pseudo" name="pseudo" [(ngModel)]="pseudo" required>
+    </mat-form-field>
+    <input class="button" type="image" src="../../../assets/images/check.png" border="0" alt="Submit"
+           [disabled]="!pseudoForm.form.valid" color="accent"/>
+  </form>
+</section>

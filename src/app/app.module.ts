@@ -13,8 +13,9 @@ import {WaterTankComponent} from './component/water-tank/water-tank.component';
 import {NewFieldComponent} from './component/new-field/new-field.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
-import { DialogComponent } from './component/dialog/dialog.component';
+import {DialogComponent} from './component/dialog/dialog.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {GameOverComponent} from './component/game-over/game-over.component';
 
 const appRoutes: Routes = [
   {path: 'game', component: GameComponent},
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     FieldComponent,
     WaterTankComponent,
     NewFieldComponent,
-    DialogComponent
+    DialogComponent,
+    GameOverComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,10 @@ const appRoutes: Routes = [
     GameService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [DialogComponent]
+  entryComponents: [
+    DialogComponent,
+    GameOverComponent
+  ]
 })
 export class AppModule {
 }

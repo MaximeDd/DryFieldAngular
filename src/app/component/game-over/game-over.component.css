@@ -1,0 +1,21 @@
+section {
+  background-image: url("../../../assets/images/dryField.jpg");
+  background-repeat: repeat-x;
+  font-family: Arial;
+  min-height: 100%;
+  background-size: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: #E5D908;
+  font-size: 70px;
+}
+
+
+mat-form-field{
+  width: 80%;
+}
+
+.button{
+  width: 15%;
+  height: 15%;
+}
